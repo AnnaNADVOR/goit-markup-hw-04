@@ -5,12 +5,6 @@
 /* колір фону герой, футер #2F303A*/
 /* колір фону секції Наша команда #F5F4FA*/
 
-/* .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    outline: 2px solid tomato;
-} */
 
 :root {
   /* bg color */
@@ -180,6 +174,9 @@ img {
 }
 
 .contacts .link {
+  display: inline-flex;
+  align-items: center;
+    
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -194,10 +191,10 @@ img {
 }
 
 .header-icon {
-  width: 16px;
-  height: 12px;
-  fill: var(--primary-text-color);
+  fill: currentColor;
+  margin-right: 10px;  
 }
+
 
 /* hero */
 .hero {
@@ -301,6 +298,20 @@ img {
   width: 270px;
 }
 
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-group {
+  display: block;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  background-color: var(--second-bg-color);
+}
+
 /* specialty */
 .specialty .list {
   display: flex;
@@ -353,6 +364,16 @@ img {
   margin-top: 10px;
 }
 
+.social-icon {
+  fill: currentColor;
+}
+
+.team .link:hover {
+  color: #ffffff;
+}
+
+
+
 /* footer */
 .footer {
   padding-top: 60px;
@@ -361,17 +382,63 @@ img {
   background-color: var(--accent-bg-color);
 }
 
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.social {
+margin-left: 70px;
+}
+
 .footer .studio {
   color: var(--primary-white-color);
 }
 
 .footer .logo {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 20px;
 }
 
-/* address */
+.footer .tittle {
+  color: var(--primary-white-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-white-color);
+}
+
+.social .list {
+  display: flex;
+}
+
+.social .item + .item {
+  margin-left:10px;
+}
+
+/* address */
 .address {
   font-weight: 400;
   font-size: 14px;
