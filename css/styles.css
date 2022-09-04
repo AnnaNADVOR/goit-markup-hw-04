@@ -5,7 +5,6 @@
 /* колір фону герой, футер #2F303A*/
 /* колір фону секції Наша команда #F5F4FA*/
 
-
 :root {
   /* bg color */
   --accent-bg-color: #2f303a;
@@ -23,6 +22,9 @@
   --btn-bg-hover: #188ce8;
 
   --btn-border-radius: 4px;
+
+  /* icon color */
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -176,7 +178,7 @@ img {
 .contacts .link {
   display: inline-flex;
   align-items: center;
-    
+
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -192,9 +194,8 @@ img {
 
 .header-icon {
   fill: currentColor;
-  margin-right: 10px;  
+  margin-right: 10px;
 }
-
 
 /* hero */
 .hero {
@@ -206,7 +207,8 @@ img {
   background-color: var(--accent-bg-color);
   text-align: center;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/hero-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -355,24 +357,54 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
 }
 
 .team-position {
   font-size: 16px;
   line-height: 1.19;
 
-  margin-top: 10px;
+  margin-bottom: 16px;
 }
 
-.social-icon {
+.team .social-link {
+  color: #afb1b8;
+}
+
+.social-team .list {
+  display: flex;
+  justify-content: center;
+}
+/* client */
+.client-icon {
+  width: 106px;
+  height: 60px;
   fill: currentColor;
 }
 
-.team .link:hover {
-  color: #ffffff;
+.client-list {
+  display: flex;
 }
 
+.client-card:not(:last-child) {
+  margin-right: 30px;
+}
 
+.client-logo {
+  display: inline-block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+  color: var(--icon-color);
+}
+
+.client-logo:hover,
+.client-logo:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 
 /* footer */
 .footer {
@@ -388,7 +420,7 @@ img {
 }
 
 .social {
-margin-left: 70px;
+  margin-left: 70px;
 }
 
 .footer .studio {
@@ -416,26 +448,28 @@ margin-left: 70px;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  color: #ffffff;
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  
+  color: var(--primary-white-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: var(--primary-white-color);
+  fill: currentColor;
 }
 
 .social .list {
   display: flex;
 }
 
-.social .item + .item {
-  margin-left:10px;
+.social .item + .item,
+.social-team .item + .item {
+  margin-left: 10px;
 }
 
 /* address */
@@ -464,8 +498,8 @@ margin-left: 70px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.address .link:hover,
+.address .link:focus {
   color: var(--accent-color);
 }
 
@@ -490,6 +524,8 @@ margin-left: 70px;
 .button.secondary:focus {
   color: var(--primary-white-color);
   background-color: var(--btn-bg-hover);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter {
@@ -516,6 +552,11 @@ margin-left: 70px;
   width: calc ((100%-60px)/3);
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.examples .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .examples .item:nth-child(3n) {
