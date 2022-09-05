@@ -307,9 +307,11 @@ img {
 }
 
 .icon-group {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 120px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 
   background-color: var(--second-bg-color);
@@ -393,12 +395,15 @@ img {
 }
 
 .client-logo {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px;
+ 
   color: var(--icon-color);
 }
 
@@ -556,7 +561,11 @@ img {
   margin-bottom: 30px;
 }
 
-.examples .item:hover {
+.examples .link {
+  display: block;
+}
+
+.examples .link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
